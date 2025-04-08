@@ -27,7 +27,7 @@ def latestepisodes():
         item = {
             'title' : anime.find("p", {"class": "name"}).find("a").text.strip() + " " + anime.find("p", {"class": "episode"}).text.strip(),
             'image' : anime.find("div", {"class": "img"}).find("img").attrs['src'],
-            'url' : "https://gogoanime.pe" + anime.find("div", {"class": "img"}).find("a").attrs['href']
+            'url' : "https://gogoanime.by" + anime.find("div", {"class": "img"}).find("a").attrs['href']
         }
         animesjson.append(item)
     t = requests.get('https://ajax.gogo-load.com/ajax/page-recent-release.html?page=1&type=3')
@@ -37,7 +37,7 @@ def latestepisodes():
         item = {
             'title' : anime.find("p", {"class": "name"}).find("a").text.strip() + " " + anime.find("p", {"class": "episode"}).text.strip(),
             'image' : anime.find("div", {"class": "img"}).find("img").attrs['src'],
-            'url' : "https://gogoanime.pe" + anime.find("div", {"class": "img"}).find("a").attrs['href']
+            'url' : "https://gogoanime.by" + anime.find("div", {"class": "img"}).find("a").attrs['href']
         }
         animesjson.append(item)
     return animesjson
